@@ -12,6 +12,7 @@ class Player(models.Model):
     position = models.CharField(max_length = 100)
     current_form = models.DecimalField(max_digits = 5, decimal_places = 2)
     price = models.DecimalField(max_digits = 5, decimal_places = 2)
+    EPL_team = models.CharField(max_length = 100)
     statistics = models.JSONField(default = dict)
 
     def update_stats(self, **kwargs): 
